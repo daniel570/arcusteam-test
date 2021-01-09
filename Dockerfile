@@ -9,8 +9,9 @@ RUN pip install flask mysql-connector-python flask-cors python-arango
 RUN apt update; apt install at -y
 
 
-CMD ["sh", "-c", "sleep 500"]
+#CMD ["sh", "-c", "python", "app.py"]
 
-#ENTRYPOINT ["python"]
+#ENTRYPOINT ["python", "flask_app.py"]
 
-#CMD ["app.py"]
+ENTRYPOINT ["./entrypoint.sh"]
+
