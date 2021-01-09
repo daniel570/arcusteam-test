@@ -1,0 +1,17 @@
+---
+- hosts: myServers
+  remote_user: ubuntu
+  become: True
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+    - name: Create default index page
+      copy:
+        dest: /usr/share/nginx/html/index.html
+        content: "Howdy from {{ ansible_hostname }}"
+    - name: Restart nginx
+      service:
+        name: nginx
+        state: restarted
