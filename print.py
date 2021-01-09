@@ -14,7 +14,8 @@ cursor_films = db.aql.execute('FOR doc IN famous_directors RETURN doc')
 
 director_films = [document['film'] for document in cursor_films]
 
+for k, v in zip(director_names, director_films):
+    print(k,v)
 
-
-print(director_names)
-print(director_films)
+#print(director_names)
+#print(director_films)

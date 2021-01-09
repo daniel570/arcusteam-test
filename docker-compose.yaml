@@ -1,0 +1,10 @@
+version: '2' 
+services:
+  web:
+    build:
+            context: .
+    ports:
+     - "5000:5000"
+    volumes:
+     - .:/opt/clonex/app
+     - ./repos:/opt/clonex/app/repos

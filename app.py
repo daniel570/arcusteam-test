@@ -4,10 +4,10 @@ from arango import ArangoClient
 client = ArangoClient(hosts='http://localhost:8529')
 
 # Connect to "_system" database as root user.
-#sys_db = client.db('_system', username='root', password='passwd')
+sys_db = client.db('_system', username='root', password='passwd')
 
 # Create a new database named "test".
-#sys_db.create_database('test')
+sys_db.create_database('test')
 
 # Connect to "test" database as root user.
 db = client.db('test', username='root', password='passwd')
@@ -34,6 +34,7 @@ cursor = db.aql.execute('FOR doc IN famous_directors RETURN doc')
 director_names = [document['name'] for document in cursor]
 director_films = [document['film'] for document in cursor]
 
-print(director_names)
-print(director_films)
+
+#print(director_names)
+#print(director_films)
 
