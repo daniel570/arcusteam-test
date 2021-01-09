@@ -1,10 +1,39 @@
-version: '2' 
+version: '2.1' 
 services:
+
+  arangodb_db_container:
+    image: arangodb:3.7.5
+    environment:
+      ARANGO_ROOT_PASSWORD: passwd
+    ports:
+      - 8529:8529
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+        #      - arangodb_data_container:/var/lib/arangodb3
+        #      - arangodb_apps_data_container:/var/lib/arangodb3-apps
+    healthcheck:
+      #test: ["CMD", "curl", "-f", "http://arangodb_db_container:8529"]
+      test: ["CMD", "wget", "http://arangodb_db_container:8529"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+
+
   web:
     build:
             context: .
     ports:
      - "5000:5000"
     volumes:
-     - .:/opt/clonex/app
-     - ./repos:/opt/clonex/app/repos
+     - .:/opt/arcusteam/app
+     - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+       arangodb_db_container:
+          condition: service_healthy
+    links:
+      - arangodb_db_container
+
+        #volumes:
+        #  arangodb_data_container:
+        #  arangodb_apps_data_container:
+

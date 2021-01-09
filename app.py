@@ -1,8 +1,8 @@
 from arango import ArangoClient
 
 # Initialize the client for ArangoDB.
-client = ArangoClient(hosts='http://localhost:8529')
-
+#client = ArangoClient(hosts='http://localhost:8529')
+client = ArangoClient(hosts='http://arcusteam_arangodb_db_container_1:8529')
 # Connect to "_system" database as root user.
 sys_db = client.db('_system', username='root', password='passwd')
 
