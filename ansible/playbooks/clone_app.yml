@@ -1,0 +1,9 @@
+---
+- name: Clone app's repository into /opt.
+  git:
+    repo: git@github.com:daniel570/arcusteam-test.git
+    version: master
+    dest: /opt/arcusteam
+    accept_hostkey: yes
+  # ssh-agent doesn't allow key to pass through remote sudo commands.
+  become: no
