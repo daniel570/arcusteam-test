@@ -1,0 +1,12 @@
+---
+- hosts: myServers
+  become: true
+  vars:
+    docker_users:
+    - roomba
+    - docker
+    docker_address_pool_base: 172.80.0.0/12
+    docker_address_pool_size: 24
+
+  roles:
+  - docker
