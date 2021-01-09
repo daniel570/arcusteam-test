@@ -1,0 +1,10 @@
+---
+
+- name: "----: ADDING USER :-----"
+  hosts: all
+  vars:
+   - username: roomba
+          
+   - user_groups: sudo
+  roles:
+    - { role: users }

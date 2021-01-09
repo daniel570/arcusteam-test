@@ -1,0 +1,8 @@
+---
+# defaults file for users
+
+default_password: S3cure
+
+user_home: "/home/{{ username }}"
+
+user_shell: "/bin/bash"
