@@ -1,6 +1,6 @@
 from arango import ArangoClient
 
-client = ArangoClient(hosts='http://arcusteam_arangodb_db_container_1:8529')
+client = ArangoClient(hosts='http://app_arangodb_db_container_1:8529')
 
 db = client.db('test', username='root', password='passwd')
 

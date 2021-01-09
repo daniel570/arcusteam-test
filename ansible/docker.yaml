@@ -5,6 +5,7 @@
     docker_users:
     - roomba
     - docker
+    - ubuntu
     docker_address_pool_base: 172.80.0.0/12
     docker_address_pool_size: 24
 

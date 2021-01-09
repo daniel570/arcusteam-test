@@ -1,0 +1,17 @@
+---
+- hosts: myServers
+  tasks:
+    #    - name: initiate dockerized app
+    #      shell:
+    #        chdir: /opt/app
+    #        cmd: docker-compose up -d --build
+
+    - docker_service:
+        project_src: /opt/app #compose
+        build: yes
+        restarted: true
+      register: output
+
+    - debug:
+        var: output
+
