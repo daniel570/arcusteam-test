@@ -1,7 +1,0 @@
-[defaults]
-
-inventory = /home/osboxes/projects/arcusteam/ansible/User_Management/ansiserver
-
-#deprecation warning
-
-deprecation_warnings=False

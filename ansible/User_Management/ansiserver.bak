@@ -1,7 +1,0 @@
-[local]
-localhost
-
-[myServers]
-
-52.59.232.137 ansible_ssh_user=ubuntu
-
