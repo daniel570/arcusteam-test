@@ -5,8 +5,8 @@ Prerequisites:
 * cloud deployment: terraform, ansible, AWSCLI
 
 To use app locally: 
-* clone this repo
-* change to cloned directory
+* clone this repo / extract zip
+* change to cloned/extracted directory
 * run 'docker-compose up -d --build'
 * to print ArangoDB Collection data to output, run 'print.py', or visit 'http://localhost:5000' to view dumped output as html on flask app
 
