@@ -1,0 +1,19 @@
+---
+- hosts: myServers
+  remote_user: ubuntu
+  become: True
+  tasks:
+    - name: Validate nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Copy nginx config file to remote server
+      copy:
+        src: ../files/nginx.conf
+        dest: /etc/nginx/nginx.conf 
+
+    - name: Restart nginx
+      service:
+        name: nginx
+        state: restarted
