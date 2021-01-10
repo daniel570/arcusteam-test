@@ -7,10 +7,13 @@
       apt:
         name: nginx
         state: present
-    - name: Create default index page
-      copy:
-        dest: /usr/share/nginx/html/index.html
-        content: "Howdy from {{ ansible_hostname }}"
+
+    - name: copy nginx config file
+      copy: src=files/nginx.conf dest=/etc/nginx/nginx.conf
+        #    - name: Create default index page
+        #      copy:
+        #        dest: /usr/share/nginx/html/index.html
+        #        content: "Howdy from {{ ansible_hostname }}"
     - name: Restart nginx
       service:
         name: nginx
