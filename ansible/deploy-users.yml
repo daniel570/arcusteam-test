@@ -1,7 +1,7 @@
 ---
 
 - name: "----: ADDING USER :-----"
-  hosts: all
+  hosts: myServers
   vars:
    - username: roomba
           
