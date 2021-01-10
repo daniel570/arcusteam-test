@@ -2,6 +2,9 @@ from arango import ArangoClient
 
 client = ArangoClient(hosts='http://app_arangodb_db_container_1:8529')
 
+### USE OF PLAIN TEXT PASSWORD
+### IS FOR DEMONSTRATION PURPOSES ONLY
+
 db = client.db('test', username='root', password='passwd')
 
 

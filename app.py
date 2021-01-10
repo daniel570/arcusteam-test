@@ -5,6 +5,10 @@ from arango import ArangoClient
 client = ArangoClient(hosts='http://app_arangodb_db_container_1:8529')
 
 # Connect to "_system" database as root user.
+
+### USE OF PLAIN TEXT PASSWORD
+### IS FOR DEMONSTRATION PURPOSES ONLY
+
 sys_db = client.db('_system', username='root', password='passwd')
 
 # Create a new database named "test".

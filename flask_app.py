@@ -8,10 +8,6 @@ import os
 import subprocess
 app = Flask(__name__)
 
-# @app.route("/")
-# def hello():
-#    return render_template('index.html')
-
 
 @cross_origin()  # allow all origins all methods.
 @app.route('/')
