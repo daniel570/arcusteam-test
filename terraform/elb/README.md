@@ -1,4 +1,4 @@
-# ELB with stickiness Example
+# ELB with cookie stickiness
 
 The example launches a web server, installs nginx, creates an ELB for instance. It also creates security groups for the ELB and EC2 instance. 
 
