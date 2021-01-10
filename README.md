@@ -1,7 +1,8 @@
 # arcusteam-test dockerized application
 
 Prerequisites:
-     docker, docker-compose
+* docker, docker-compose
+     
 To use app: 
      clone this repo
      change to cloned directory
