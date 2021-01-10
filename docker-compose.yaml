@@ -9,10 +9,9 @@ services:
       - 8529:8529
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-        #      - arangodb_data_container:/var/lib/arangodb3
-        #      - arangodb_apps_data_container:/var/lib/arangodb3-apps
+      - arangodb_data_container:/var/lib/arangodb3
+      - arangodb_apps_data_container:/var/lib/arangodb3-apps
     healthcheck:
-      #test: ["CMD", "curl", "-f", "http://arangodb_db_container:8529"]
       test: ["CMD", "wget", "http://arangodb_db_container:8529"]
       interval: 5s
       timeout: 5s
@@ -33,7 +32,6 @@ services:
     links:
       - arangodb_db_container
 
-        #volumes:
-        #  arangodb_data_container:
-        #  arangodb_apps_data_container:
-
+volumes:
+  arangodb_data_container:
+  arangodb_apps_data_container:
