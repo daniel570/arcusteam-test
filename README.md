@@ -8,7 +8,7 @@ To use app locally:
 * clone this repo / extract zip
 * change to cloned/extracted directory
 * run 'docker-compose up -d --build'
-* to print ArangoDB Collection data to output, run 'print.py', or visit 'http://localhost:5000' to view dumped output as html on flask app
+* to print ArangoDB Collection data to output, run 'print.py' script, or visit 'http://localhost:5000' to view dumped output as html on flask app
 
 To deploy app:
 * cd terraform/elb
