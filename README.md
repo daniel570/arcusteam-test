@@ -1,4 +1,4 @@
-# arcusteam-test dockerized application
+# flask test dockerized application
 
 Prerequisites:
 * local deployment: docker, docker-compose
